@@ -13,5 +13,31 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 500ms linear, visibility 500ms linear;
+    transition: opacity var(transition), visibility var(transition);
   }
+  .mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .mobile-menu__conteiner {
+    position: relative;
+    padding-left: 25px;
+    padding-top: 33px;
+    padding-bottom: 33px;
+  }
+  .mobile-menu__close-btn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}

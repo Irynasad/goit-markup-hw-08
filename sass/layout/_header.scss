@@ -1,3 +1,4 @@
+// 0-767px
 @media screen and (max-width: 767px) {
   .menu {
     display: none;
@@ -5,17 +6,131 @@
   .contact-list {
     display: none;
   }
+  .mobile-menu-open {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+  }
 }
 .nav-conteiner {
-  display: flex;
-  align-items: center;
+  @include flex();
   justify-content: space-between;
 }
-.mobile-menu-open {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  line-height: 0;
+// 0-1199px
+@media screen and (max-width: 1199px) {
+  .logo {
+    @include font($fw: 700, $fs: 24px, $fh: 28px);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .nav-conteiner {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  // .header-mail {
+  //   margin-bottom: 10px;
+  // }
+}
+
+// 768px-...
+@media screen and (min-width: 768px) {
+  .mobile-menu-open {
+    display: none;
+  }
+  .nav {
+    @include flex();
+  }
+  .menu {
+    @include flex();
+  }
+  .menu__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .header__logo {
+    margin-right: 87px;
+  }
+  .menu__link {
+    display: block;
+    position: relative;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--primery-color-text-white-them);
+    transition: color var(--transition);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+
+  .current {
+    color: var(--accent-color);
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -33px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: var(--accent-color);
+    }
+  }
+  // .contact-list {
+  //   margin-left: auto;
+  // }
+  .contact-list-icon {
+    align-items: center;
+    margin-right: 10px;
+    fill: currentColor;
+    transition: fill var(--transition);
+
+    .contact:hover &,
+    .contact:focus & {
+      fill: var(--accent-color);
+    }
+  }
+
+  // .contakt-list__item {
+  //   display: flex;
+  // }
+  // .contact-tel {
+  //   margin-left: 50px;
+  // }
+  .contact {
+    @include font($fw: 500, $fs: 12px, $fh: 14px);
+    transition: color var(--transition);
+    font-style: normal;
+    letter-spacing: 0.02em;
+    color: var(--secondary-color-text-white-them);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+}
+
+// 1200px-...
+@media screen and (min-width: 1200px) {
+  .logo {
+    @include font($fw: 700, $fs: 26px, $fh: 31px);
+  }
+  .header__logo {
+    margin-right: 95px;
+  }
+  .contakt-list__item {
+    display: flex;
+  }
+  .contact-tel {
+    margin-left: 50px;
+  }
+  .contact {
+    @include font($fw: 500, $fs: 14px, $fh: 16px);
+  }
 }
 
 // .header {
@@ -92,7 +207,6 @@
 
 // .current {
 //   color: var(--accent-color);
-
 //   &::after {
 //     content: "";
 //     position: absolute;

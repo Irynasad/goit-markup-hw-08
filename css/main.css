@@ -66,6 +66,12 @@ ol {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 img {
@@ -80,7 +86,7 @@ address {
 
 button {
   display: block;
-  margin: 0 auto;
+  margin: 0;
   padding: 10px 32px;
   cursor: pointer;
   border: none;
@@ -95,7 +101,7 @@ button {
 .conteiner {
   width: 100%;
   padding: 0 15px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 @media screen and (min-width: 480px) {
@@ -124,9 +130,6 @@ button {
 
 .logo {
   font-family: var(--secondary-font);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
   color: var(--accent-color);
 }
 
@@ -320,11 +323,59 @@ button {
 }
 
 @media screen and (max-width: 767px) {
+  .mobile-menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    max-height: 796px;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: aqua;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity var(transition), visibility var(transition);
+  }
+  .mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .mobile-menu__conteiner {
+    position: relative;
+    padding-left: 25px;
+    padding-top: 33px;
+    padding-bottom: 33px;
+  }
+  .mobile-menu__close-btn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
   .menu {
     display: none;
   }
   .contact-list {
     display: none;
+  }
+  .mobile-menu-open {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
   }
 }
 .nav-conteiner {
@@ -333,9 +384,102 @@ button {
   justify-content: space-between;
 }
 
-.mobile-menu-open {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  line-height: 0;
+@media screen and (max-width: 1199px) {
+  .logo {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.1666666667;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .nav-conteiner {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu-open {
+    display: none;
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+  }
+  .menu__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .header__logo {
+    margin-right: 87px;
+  }
+  .menu__link {
+    display: block;
+    position: relative;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--primery-color-text-white-them);
+    transition: color var(--transition);
+  }
+  .menu__link:hover, .menu__link:focus {
+    color: var(--accent-color);
+  }
+  .current {
+    color: var(--accent-color);
+  }
+  .current::after {
+    content: "";
+    position: absolute;
+    bottom: -33px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+  }
+  .contact-list-icon {
+    align-items: center;
+    margin-right: 10px;
+    fill: currentColor;
+    transition: fill var(--transition);
+  }
+  .contact:hover .contact-list-icon, .contact:focus .contact-list-icon {
+    fill: var(--accent-color);
+  }
+  .contact {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.1666666667;
+    transition: color var(--transition);
+    font-style: normal;
+    letter-spacing: 0.02em;
+    color: var(--secondary-color-text-white-them);
+  }
+  .contact:hover, .contact:focus {
+    color: var(--accent-color);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.1923076923;
+  }
+  .header__logo {
+    margin-right: 95px;
+  }
+  .contakt-list__item {
+    display: flex;
+  }
+  .contact-tel {
+    margin-left: 50px;
+  }
+  .contact {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1428571429;
+  }
 }/*# sourceMappingURL=main.css.map */

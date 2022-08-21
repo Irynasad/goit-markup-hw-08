@@ -35,7 +35,7 @@
 					</li>
 				</ul>
 			</nav>
-			<button type="button" class="mobile-menu-open">
+			<button type="button" class="mobile-menu-open" data-menu-open>
 				<svg class="mobile-menu-open_icon" width="40" height="40">
 					<use href="./images/sprite.svg#burger-icon"></use>
 				</svg>
@@ -61,7 +61,27 @@
 				</li>
 			</ul>
 		</div>
-		<div class="mobile-menu"></div>
+		<div class="mobile-menu" data-menu>
+			<div class="conteiner mobile-menu__conteiner">
+				<button class="mobile-menu__close-btn" data-menu-close>
+					<svg class="mobile-menu__close-icon" width="40" height="40">
+						<use href="./images/sprite.svg#close">
+						</use>
+					</svg>
+				</button>
+				<ul class="menu list">
+					<li class="menu__item">
+						<a class="menu__link current link" href="./index.html">Студия</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link link" href="./portfolio.html">Портфолио</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link link" href="#">Контакты</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</header>
 	<main> -->
 		<!-----------------------------HERO-------------------------------------->
@@ -490,6 +510,7 @@
 			</form>
 		</div>
 	</div> -->
+		<script src="./js/mobile-menu.js"></script>
 		<!-- <script src="./js/modal.js"></script> -->
 </body>
 

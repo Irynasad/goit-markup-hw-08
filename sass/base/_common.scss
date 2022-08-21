@@ -19,6 +19,11 @@ ol {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 img {
   display: block;
@@ -30,7 +35,7 @@ address {
 }
 button {
   display: block;
-  margin: 0 auto;
+  margin: 0;
   padding: 10px 32px;
   cursor: pointer;
   border: none;
