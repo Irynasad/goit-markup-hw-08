@@ -1,0 +1,122 @@
+.footer {
+  background-color: var(--primery-background);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer-conteiner {
+  @include flex($ai: baseline);
+}
+.footer__address {
+  margin-top: 20px;
+}
+.address__list {
+  display: block;
+}
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.address__map {
+  font-size: var(--primery-font-size);
+  line-height: 1.71;
+  color: var(--primery-color-text-dark-them);
+}
+
+.address__contact {
+  font-size: var(--primery-font-size);
+  line-height: 1.71;
+  color: var(--secondary-color-text-white-them);
+  transition: color var(--transition);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.footer__join {
+  margin-left: 70px;
+}
+.slogan {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+.join__list {
+  display: flex;
+  margin-top: 20px;
+  gap: 10px;
+  margin-left: 0px;
+}
+.join__link {
+  @include flex();
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--primery-color-text-dark-them);
+  transition: background-color var(--transition);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}
+.footer__subscription {
+  margin-left: 93px;
+}
+.subscription-form {
+  display: flex;
+  margin-top: 20px;
+}
+.subscription-form__input {
+  display: block;
+  border: 1px solid var(--input-border-color-dark-them);
+  border-radius: 4px;
+  background-color: var(--primery-background);
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  padding-left: 16px;
+  font-size: var(--secondary-font);
+  color: var(--primery-color-text-dark-them);
+  line-height: 1.25;
+
+  &::placeholder {
+    font-size: var(--secondary-font-size);
+    color: var(--secondary-color-text-dark-them);
+    line-height: 1.25;
+  }
+}
+
+.subscription-form__btn {
+  @include flex();
+  background-color: var(--accent-color);
+  min-width: 200px;
+  padding: 10px 28px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+  font-size: var(--secondary-font-size);
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--primery-color-text-dark-them);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color var(--transition);
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-twelwe);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    background-image: url(../images/forsprite/send.svg);
+  }
+}
