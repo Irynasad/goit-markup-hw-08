@@ -1,4 +1,6 @@
-// .list {
-//   display: flex;
-//   align-items: center;
-// }
+@media screen and (min-width: 1200px) {
+  .list {
+    display: flex;
+    align-items: center;
+  }
+}

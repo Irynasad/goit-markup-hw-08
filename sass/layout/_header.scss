@@ -28,9 +28,9 @@
     padding-top: 21px;
     padding-bottom: 21px;
   }
-  // .header-mail {
-  //   margin-bottom: 10px;
-  // }
+  .header-mail {
+    margin-bottom: 10px;
+  }
 }
 
 // 768px-...
@@ -79,12 +79,8 @@
       background-color: var(--accent-color);
     }
   }
-  // .contact-list {
-  //   margin-left: auto;
-  // }
   .contact-list-icon {
     align-items: center;
-    margin-right: 10px;
     fill: currentColor;
     transition: fill var(--transition);
 
@@ -94,12 +90,9 @@
     }
   }
 
-  // .contakt-list__item {
-  //   display: flex;
-  // }
-  // .contact-tel {
-  //   margin-left: 50px;
-  // }
+  .contakt-list__item {
+    display: flex;
+  }
   .contact {
     @include font($fw: 500, $fs: 12px, $fh: 14px);
     transition: color var(--transition);
@@ -113,15 +106,37 @@
     }
   }
 }
+// 768px-1199px
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact-list-icon {
+    width: 14px;
+    height: 10px;
+    margin-right: 8px;
+  }
+  .contact-tel .contact-list-icon {
+    width: 10px;
+    height: 14px;
+  }
+}
 
 // 1200px-...
 @media screen and (min-width: 1200px) {
+  .header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--secondary-background);
+  }
+
   .logo {
     @include font($fw: 700, $fs: 26px, $fh: 31px);
   }
   .header__logo {
     margin-right: 95px;
   }
+  .contact-list {
+    margin-left: auto;
+  }
+
   .contakt-list__item {
     display: flex;
   }
@@ -131,13 +146,20 @@
   .contact {
     @include font($fw: 500, $fs: 14px, $fh: 16px);
   }
+  .contact-list-icon {
+    margin-right: 10px;
+    width: 16px;
+    height: 12px;
+  }
+  .contact-tel .contact-list-icon {
+    width: 10px;
+    height: 16px;
+  }
+  .contact-tel {
+    margin-left: 50px;
+  }
 }
 
-// .header {
-//   padding-top: 24px;
-//   padding-bottom: 24px;
-//   border: 1px solid var(--secondary-background);
-// }
 // .nav-conteiner {
 //   @include flex();
 // }
