@@ -1,8 +1,14 @@
-.title-second {
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  color: var(--primery-color-text-white-them);
+@media screen and (min-width: 320px) {
+  .title-second {
+    margin-bottom: 30px;
+    @include font($fw: 700px, $fs: 28px, $fh: 32px);
+    text-align: center;
+    color: var(--primery-color-text-white-them);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .title-second {
+    margin-bottom: 50px;
+    @include font($fw: 700px, $fs: 36px, $fh: 42px);
+  }
 }
