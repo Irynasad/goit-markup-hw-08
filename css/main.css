@@ -93,6 +93,10 @@ button {
   border-radius: 4px;
 }
 
+.section {
+  width: 100%;
+}
+
 @media screen and (max-width: 1199px) {
   .section {
     padding-top: 60px;
@@ -108,12 +112,12 @@ button {
 .conteiner {
   width: 100%;
   padding: 0 15px;
-  margin: 0;
 }
 
 @media screen and (min-width: 480px) {
   .conteiner {
     width: 480px;
+    margin: 0 auto;
   }
 }
 @media screen and (min-width: 768px) {
@@ -124,7 +128,6 @@ button {
 @media screen and (min-width: 1200px) {
   .conteiner {
     width: 1200px;
-    margin: 0 auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -547,6 +550,43 @@ button {
     margin-left: 50px;
   }
 }
+@media screen and (min-width: 480px) {
+  .hero {
+    width: 100%;
+    background-color: var(--hero-background);
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+  }
+  .hero__conteiner {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero__title {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--primery-color-text-dark-them);
+  }
+  .hero__button {
+    background-color: var(--accent-color);
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--primery-color-text-dark-them);
+    transition: background-color var(--transition);
+  }
+  .hero__button:hover, .hero__button:focus {
+    background-color: var(--color-twelwe);
+  }
+}
 @media screen and (max-width: 767px) {
   .hero {
     max-width: 480px;
@@ -575,46 +615,12 @@ button {
     width: 360px;
   }
 }
-.hero {
-  background-color: var(--hero-background);
-  margin-left: auto;
-  margin-right: auto;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  text-align: center;
-}
-
-.hero__title {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--primery-color-text-dark-them);
-}
-
-.hero__button {
-  background-color: var(--accent-color);
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: var(--primery-color-text-dark-them);
-  transition: background-color var(--transition);
-}
-.hero__button:hover, .hero__button:focus {
-  background-color: var(--color-twelwe);
-}
-
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero/mob-hero@2x.jpg");
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199px) {
   .hero {
     max-width: 768px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero/tabl-hero.jpg");
@@ -625,9 +631,9 @@ button {
     line-height: 1.6153846154;
   }
 }
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 1199px), screen and (min-resolution: 192dpi) and (max-width: 1199px), screen and (min-resolution: 2dppx) and (max-width: 1199px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../../images/hero/tabl-hero@2x.jpg"');
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero/tabl-hero@2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
@@ -659,7 +665,7 @@ button {
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .principe__item {
-    width: 450px;
+    width: 100%;
   }
 }
 @media screen and (min-width: 480px) {
@@ -667,12 +673,14 @@ button {
     width: 100%;
   }
   .principe__list {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
   }
   .principe__item {
+    width: 100%;
     text-align: center;
   }
   .principe__item::before {
@@ -717,6 +725,16 @@ button {
     width: 354px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .principe__item {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .principe__item {
+    width: 270px;
+  }
+}
 @media screen and (max-width: 1199px) {
   .work-section {
     display: none;
@@ -757,6 +775,10 @@ button {
   }
 }
 @media screen and (min-width: 480px) {
+  .staff {
+    flex-wrap: wrap;
+    align-items: center;
+  }
   .staff-section {
     background-color: var(--secondary-background);
   }
@@ -767,19 +789,19 @@ button {
   }
   .staff__img {
     width: 450px;
-    height: 460px;
   }
   .staff__item {
     display: block;
     text-align: center;
     justify-content: center;
     align-items: center;
+    text-align: center;
     background: var(--primery-color-text-dark-them);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
   }
   .staff__descriptione {
-    padding: 30px 0px;
+    padding: 30px 0 24px 0;
   }
   .staff__name {
     margin-bottom: 10px;
@@ -817,5 +839,55 @@ button {
   }
   .social-icon {
     fill: currentColor;
+  }
+}
+@media screen and (min-width: 768px) {
+  .staff__img {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .staff__img {
+    width: 270px;
+  }
+  .staff__descriptione {
+    padding-bottom: 30px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .client {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .client__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+    width: 210px;
+    height: 92px;
+    color: var(--icon-color);
+    transition: color var(--transition), border-color var(--transition);
+  }
+  .client__link:hover, .client__link:focus {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+  }
+  .client__icon {
+    fill: currentColor;
+  }
+}
+@media screen and (min-width: 768px) {
+  .client__link {
+    width: 226px;
+    height: 92px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client__link {
+    width: 170px;
+    height: 92px;
   }
 }/*# sourceMappingURL=main.css.map */
