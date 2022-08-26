@@ -81,8 +81,7 @@
   margin-bottom: 30px;
   line-height: 15px;
   color: var(--secondary-color-text-white-them);
-  font-size: var(--primery-font-size);
-  line-height: 1.7;
+  font-size: 12px;
 
   &::before {
     content: '';
@@ -131,6 +130,7 @@
 }
 @media screen and (min-width: 1200px) {
   .modal-form-check-desc {
+    font-size: 14px;
     &::before {
       margin-right: 9px;
     }
