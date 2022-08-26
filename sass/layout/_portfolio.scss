@@ -100,7 +100,7 @@
   }
   .portfolio-wrapper {
     display: flex;
-    direction: column;
+    flex-direction: column;
     flex-grow: 1;
     padding: 20px 24px;
     border: 1px solid var(--border-color);
