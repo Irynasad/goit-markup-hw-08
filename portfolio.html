@@ -13,7 +13,6 @@
 		rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css">
 	<link rel="stylesheet" href="./css/main.min.css" />
-
 </head>
 
 <body>
@@ -36,6 +35,11 @@
 					</li>
 				</ul>
 			</nav>
+			<button type="button" class="mobile-menu-open" data-menu-open>
+				<svg class="mobile-menu-open_icon" width="40" height="40">
+					<use href="./images/sprite.svg#burger-icon"></use>
+				</svg>
+			</button>
 			<ul class="contact-list list">
 				<li class="contakt-list__item header-mail">
 					<a class="contact link" href="mailto:info@devstudio.com">
@@ -56,24 +60,44 @@
 					</a>
 				</li>
 			</ul>
-
+		</div>
+		<div class="mobile-menu" data-menu>
+			<div class="conteiner mobile-menu__conteiner">
+				<button class="mobile-menu__close-btn" data-menu-close>
+					<svg class="mobile-menu__close-icon" width="40" height="40">
+						<use href="./images/sprite.svg#close">
+						</use>
+					</svg>
+				</button>
+				<ul class="menu list">
+					<li class="menu__item">
+						<a class="menu__link current link" href="./index.html">Студия</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link link" href="./portfolio.html">Портфолио</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link link" href="#">Контакты</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</header>
 	<main>
 		<!--------------------------PORTFOLIO-------------------------------------------->
-		<!-- <main>
+		<main>
 			<section class="portfolio section">
 				<div class="conteiner">
 					<h1 class="visually-hidden">Наши работы</h1>
 					<ul class="filter-list portfolio__filter-list list">
 						<li class="filter-list__item">
-							<button class="filter-list__button" type="button">Все</button>
+							<button class="filter-list__button" type="button">Усі</button>
 						</li>
 						<li class="filter-list__item">
-							<button class="filter-list__button" type="button">Веб-сайты</button>
+							<button class="filter-list__button" type="button">Веб-сайти</button>
 						</li>
 						<li class="filter-list__item">
-							<button class="filter-list__button" type="button">Приложения</button>
+							<button class="filter-list__button" type="button">Додатки</button>
 						</li>
 						<li class="filter-list__item">
 							<button class="filter-list__button" type="button">Дизайн</button>
@@ -86,9 +110,22 @@
 						<li class="portfolio-list__item">
 							<a class="link portfolio-list__link" href="">
 								<div class="img-wrapper">
-									<img src="./images/Portfolio/tehnokrak.jpg" alt="Ноутбук с открытым вебсайтом"
-										width="370" height="294" />
-									<p class="img-wrapper__overlay">Ресурс пропонує комплексні пропозиції з різним
+									<picture>
+										<source
+											srcset="./images/Portfolio/tehnokrak.jpg 1x, ./images/Portfolio/tehnokrak@2x.jpg 2x"
+											media="(min-width: 1200px)">
+										<source
+											srcset="./images/Portfolio/tabl-tehnokrak.jpg 1x, ./images/Portfolio/tabl-tehnokrak@2x.jpg 2x"
+											media="(min-width: 768px)">
+										<source
+											srcset="./images/Portfolio/mob-tehnokrak.jpg 1x, ./images/Portfolio/mob-tehnokrak@2x.jpg 2x"
+											media="(min-width: 320px)">
+
+										<img src="./images/Portfolio/tehnokrak.jpg"
+											alt="Ноутбук с открытым вебсайтом" />
+									</picture>
+									<p class="img-wrapper__overlay">Ресурс пропонує комплексні пропозиції з
+										різним
 										рівнем
 										функціоналу та сервісів. Все це дозволить відвідувачу отримати
 										вичерпні відомості про компанію чи приватну особу.
@@ -103,9 +140,19 @@
 						<li class="portfolio-list__item">
 							<a class="link portfolio-list__link" href="">
 								<div class="img-wrapper">
-									<img src="./images/Portfolio/bascketbol.jpg"
-										alt="Баскетболист в белом пытается забрать мяч у баскетболиста в фиолетовом"
-										width="370" height="294" />
+									<picture>
+										<source
+											srcset="./images/Portfolio/bascketbol.jpg 1x, ./images/Portfolio/bascketbol@2x.jpg 2x"
+											media="(min-width: 1200px)">
+										<source
+											srcset="./images/Portfolio/tabl-bascketbol.jpg 1x, ./images/Portfolio/tabl-bascketbol@2x.jpg 2x"
+											media="(min-width: 768px)">
+										<source
+											srcset="./images/Portfolio/mob-bascketbol.jpg 1x, ./images/Portfolio/mob-bascketbol@2x.jpg 2x"
+											media="(min-width: 320px)">
+										<img src="./images/Portfolio/bascketbol.jpg"
+											alt="Баскетболист в белом пытается забрать мяч у баскетболиста в фиолетовом" />
+									</picture>
 									<p class="img-wrapper__overlay">Ресурс пропонує комплексні пропозиції з різним
 										рівнем
 										функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -124,8 +171,18 @@
 						<li class="portfolio-list__item">
 							<a class="link portfolio-list__link" href="">
 								<div class="img-wrapper">
-									<img src="./images/Portfolio/seafood.jpg" alt="Вывеска ресторана" width="370"
-										height="294" />
+									<picture>
+										<source
+											srcset="./images/Portfolio/seafood.jpg 1x, ./images/Portfolio/seafood@2x.jpg 2x"
+											media="(min-width: 1200px)">
+										<source
+											srcset="./images/Portfolio/tabl-seafood.jpg 1x, ./images/Portfolio/tabl-seafood@2x.jpg 2x"
+											media="(min-width: 768px)">
+										<source
+											srcset="./images/Portfolio/mob-seafood.jpg 1x, ./images/Portfolio/mob-seafood@2x.jpg 2x"
+											media="(min-width: 320px)">
+										<img src="./images/Portfolio/seafood.jpg" alt="Вывеска ресторана" />
+									</picture>
 									<p class="img-wrapper__overlay">Ресурс пропонує комплексні пропозиції з різним
 										рівнем
 										функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -144,8 +201,18 @@
 						<li class="portfolio-list__item">
 							<a class="link portfolio-list__link" href="">
 								<div class="img-wrapper">
-									<img src="./images/Portfolio/prime.jpg" alt="Безпроводные наушники" width="370"
-										height="294" />
+									<picture>
+										<source
+											srcset="./images/Portfolio/prime.jpg 1x, ./images/Portfolio/prime@2x.jpg 2x"
+											media="(min-width: 1200px)">
+										<source
+											srcset="./images/Portfolio/tabl-prime.jpg 1x, ./images/Portfolio/tabl-prime@2x.jpg 2x"
+											media="(min-width: 768px)">
+										<source
+											srcset="./images/Portfolio/mob-prime.jpg 1x, ./images/Portfolio/mob-prime@2x.jpg 2x"
+											media="(min-width: 320px)">
+										<img src="./images/Portfolio/prime.jpg" alt="Безпроводные наушники" />
+									</picture>
 									<p class="img-wrapper__overlay">Ресурс пропонує комплексні пропозиції з різним
 										рівнем
 										функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -164,10 +231,21 @@
 						<li class="portfolio-list__item">
 							<a class="link portfolio-list__link" href="">
 								<div class="img-wrapper">
-									<img src="./images/Portfolio/boxes.jpg"
-										alt="Белая большая и бежевая маленькая коробки" width="370" height="294" />
-									<p class="img-wrapper__overlay">Ресурс пропонує комплексні пропозиції з різним
-										рівнем
+									<picture>
+										<source
+											srcset="./images/Portfolio/boxes.jpg 1x, ./images/Portfolio/boxes@2x.jpg 2x"
+											media="(min-width: 1200px)">
+										<source
+											srcset="./images/Portfolio/tabl-boxes.jpg 1x, ./images/Portfolio/tabl-boxes@2x.jpg 2x"
+											media="(min-width: 768px)">
+										<source
+											srcset="./images/Portfolio/mob-boxes.jpg 1x, ./images/Portfolio/mob-boxes@2x.jpg 2x"
+											media="(min-width: 320px)">
+										<img src="./images/Portfolio/boxes.jpg"
+											alt="Белая большая и бежевая маленькая коробки" />
+									</picture>
+									<p class="img-wrapper__overlay">
+										Ресурс пропонує комплексні пропозиції з різним рівнем
 										функціоналу та сервісів. Все це дозволить відвідувачу отримати
 										вичерпні відомості про компанію чи приватну особу.
 									</p>
@@ -184,8 +262,18 @@
 						<li class="portfolio-list__item">
 							<a class="link portfolio-list__link" href="">
 								<div class="img-wrapper">
-									<img src="./images/Portfolio/website.jpg" alt="Экран с открытым веб-сайтом"
-										width="370" height="294" />
+									<picture>
+										<source
+											srcset="./images/Portfolio/website.jpg 1x, ./images/Portfolio/website@2x.jpg 2x"
+											media="(min-width: 1200px)">
+										<source
+											srcset="./images/Portfolio/tabl-website.jpg 1x, ./images/Portfolio/tabl-website@2x.jpg 2x"
+											media="(min-width: 768px)">
+										<source
+											srcset="./images/Portfolio/mob-website.jpg 1x, ./images/Portfolio/mob-website@2x.jpg 2x"
+											media="(min-width: 320px)">
+										<img src="./images/Portfolio/website.jpg" alt="Экран с открытым веб-сайтом" />
+									</picture>
 									<p class="img-wrapper__overlay">Ресурс пропонує комплексні пропозиції з різним
 										рівнем
 										функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -201,8 +289,18 @@
 						<li class="portfolio-list__item">
 							<a class="link portfolio-list__link" href="">
 								<div class="img-wrapper">
-									<img src="./images/Portfolio/magazine.jpg" alt="Разворот журнала" width="370"
-										height="294" />
+									<picture>
+										<source
+											srcset="./images/Portfolio/magazine.jpg 1x, ./images/Portfolio/magazine@2x.jpg 2x"
+											media="(min-width: 1200px)">
+										<source
+											srcset="./images/Portfolio/tabl-magazine.jpg 1x, ./images/Portfolio/tabl-magazine@2x.jpg 2x"
+											media="(min-width: 768px)">
+										<source
+											srcset="./images/Portfolio/mob-magazine.jpg 1x, ./images/Portfolio/mob-magazine@2x.jpg 2x"
+											media="(min-width: 320px)">
+										<img src="./images/Portfolio/magazine.jpg" alt="Разворот журнала" />
+									</picture>
 									<p class="img-wrapper__overlay">Ресурс пропонує комплексні пропозиції з різним
 										рівнем
 										функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -218,8 +316,18 @@
 						<li class="portfolio-list__item">
 							<a class="link portfolio-list__link" href="">
 								<div class="img-wrapper">
-									<img src="./images/Portfolio/lab.jpg" alt="Этикетка с логотипом" width="370"
-										height="294" />
+									<picture>
+										<source srcset="./images/Portfolio/lab.jpg 1x, ./images/Portfolio/lab@2x.jpg 2x"
+											media="(min-width: 1200px)">
+										<source
+											srcset="./images/Portfolio/tabl-lab.jpg 1x, ./images/Portfolio/tabl-lab@2x.jpg 2x"
+											media="(min-width: 768px)">
+										<source
+											srcset="./images/Portfolio/mob-lab.jpg 1x, ./images/Portfolio/mob-lab@2x.jpg 2x"
+											media="(min-width: 320px)">
+
+										<img src="./images/Portfolio/lab.jpg" alt="Этикетка с логотипом" />
+									</picture>
 									<p class="img-wrapper__overlay">Ресурс пропонує комплексні пропозиції з різним
 										рівнем
 										функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -238,8 +346,19 @@
 						<li class="portfolio-list__item">
 							<a class="link portfolio-list__link" href="">
 								<div class="img-wrapper">
-									<img src="./images/Portfolio/growning.jpg"
-										alt="Человек работает на ноутбуке в приложении" width="370" height="294" />
+									<picture>
+										<source
+											srcset="./images/Portfolio/growing.jpg 1x, ./images/Portfolio/growing@2x.jpg 2x"
+											media="(min-width: 1200px)">
+										<source
+											srcset="./images/Portfolio/tabl-growing.jpg 1x, ./images/Portfolio/tabl-growing@2x.jpg 2x"
+											media="(min-width: 768px)">
+										<source
+											srcset="./images/Portfolio/mob-growing.jpg 1x, ./images/Portfolio/mob-growing@2x.jpg 2x"
+											media="(min-width: 320px)">
+										<img src="./images/Portfolio/growing.jpg"
+											alt="Человек работает на ноутбуке в приложении" />
+									</picture>
 									<p class="img-wrapper__overlay">Ресурс пропонує комплексні пропозиції з різним
 										рівнем
 										функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -256,9 +375,9 @@
 				</div>
 				</div>
 			</section>
-		</main> -->
+		</main>
 		<!--------------------------------FOOTER---------------------------------------------->
-		<!-- <footer class="footer">
+		<footer class="footer">
 			<div class="conteiner footer-conteiner">
 				<div>
 					<a class="logo link" href="./index.html" lang="en">Web<span
@@ -327,7 +446,8 @@
 					</form>
 				</div>
 			</div>
-		</footer> -->
+		</footer>
+		<script src="./js/mobile-menu.js"></script>
 
 </body>
 

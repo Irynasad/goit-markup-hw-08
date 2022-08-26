@@ -1,7 +1,7 @@
 @media screen and (min-width: 320px) {
   .title-second {
     margin-bottom: 30px;
-    @include font($fw: 700px, $fs: 28px, $fh: 32px);
+    @include font($fw: 700px, $fs: 28px, $fh: 33px);
     text-align: center;
     color: var(--primery-color-text-white-them);
   }
