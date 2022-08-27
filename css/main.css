@@ -416,7 +416,6 @@ button {
     display: flex;
     flex-direction: column;
     align-items: left;
-    margin-bottom: 302px;
   }
   .mobile-menu__item:not(:last-child) {
     margin-bottom: 32px;
