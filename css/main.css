@@ -136,12 +136,6 @@ button {
     align-items: center;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .link {
-    display: flex;
-    align-items: center;
-  }
-}
 @media screen and (min-width: 1200px) {
   .link {
     display: flex;
@@ -1203,17 +1197,16 @@ button {
   }
 }
 @media screen and (min-width: 320px) and (max-width: 1199px) {
+  .address-conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .address__list {
+    text-align: center;
+  }
   .logo {
     justify-content: center;
-  }
-  .address__map {
-    justify-content: center;
-  }
-  .address__contact {
-    justify-content: center;
-  }
-  .footer__join {
-    text-align: center;
   }
   .join__item {
     display: block;
